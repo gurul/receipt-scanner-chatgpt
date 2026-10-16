@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "receipt-scanner",
+  "version": "0.1.0",
+  "description": "Record receipt photos, track ingredient prices, and calculate product costs and margins in ChatGPT.",
+  "keywords": ["receipts", "inventory", "costing", "small-business"]
+}

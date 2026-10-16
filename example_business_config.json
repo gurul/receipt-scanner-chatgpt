@@ -1,0 +1,78 @@
+{
+  "business": {
+    "name": "Example Dumpling Co",
+    "industry": "restaurant",
+    "description": "Example config for trying out the ChatGPT receipt scanner"
+  },
+  "items": {
+    "aliases": {
+      "Pork": {
+        "patterns": ["GRD PORK", "GROUND PORK", "PORK GRND"],
+        "category": "Protein",
+        "default_unit": "lb"
+      },
+      "Flour": {
+        "patterns": ["FLOUR", "AP FLOUR", "ALL PURPOSE FLOUR"],
+        "category": "Grain",
+        "default_unit": "lb"
+      },
+      "Cabbage": {
+        "patterns": ["CABBAGE", "NAPA"],
+        "category": "Produce",
+        "default_unit": "lb"
+      },
+      "Salt": {
+        "patterns": ["SALT", "KOSHER SALT"],
+        "category": "Seasoning",
+        "default_unit": "lb"
+      },
+      "Takeout Container": {
+        "patterns": ["CONTAINER", "CLAMSHELL"],
+        "category": "Packaging",
+        "default_unit": "ea"
+      }
+    },
+    "categories": ["Protein", "Produce", "Grain", "Seasoning", "Packaging"]
+  },
+  "products": {
+    "unit_name": "serving",
+    "recipes": {
+      "Pork Dumplings": {
+        "size": "10 pc",
+        "batch_size": 40,
+        "ingredients": {
+          "Pork": {"qty": 10, "unit": "lb"},
+          "Flour": {"qty": 8, "unit": "lb"},
+          "Cabbage": {"qty": 6, "unit": "lb"},
+          "Salt": {"qty": 0.25, "unit": "lb"},
+          "Takeout Container": {"qty": 40, "unit": "ea"}
+        }
+      }
+    }
+  },
+  "overhead": {
+    "monthly_production": 2000,
+    "cost_categories": [
+      {"name": "Labor", "monthly_amount": 4000},
+      {"name": "Rent", "monthly_amount": 1500}
+    ]
+  },
+  "pricing": {
+    "tiers": {
+      "dine_in": {"label": "Dine-In", "prices": {"Pork Dumplings": {"per_unit": 12.0}}},
+      "catering": {"label": "Catering", "prices": {"Pork Dumplings": {"low": 9.0, "high": 11.0}}}
+    }
+  },
+  "extraction": {
+    "prompt_context": "They purchase food ingredients and packaging from restaurant suppliers and wholesale clubs.",
+    "item_term": "ingredient",
+    "receipt_rules": [
+      "For quantity, use the number and unit as printed (e.g., 35 LB, 4 EA, 2 CS)"
+    ]
+  },
+  "sheets": {
+    "tab_names": {
+      "recipes": "Menu Costs"
+    }
+  }
+}

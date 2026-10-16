@@ -1,0 +1,15 @@
+{
+  "merchant": "Example Wholesale",
+  "date": "2026-10-16",
+  "receipt_id": null,
+  "items": [
+    {"raw_description": "GRD PORK", "quantity": 10, "unit": "lb", "unit_price": 3, "total_price": 30},
+    {"raw_description": "AP FLOUR", "quantity": 128, "unit": "oz", "unit_price": 0.0625, "total_price": 8},
+    {"raw_description": "NAPA CABBAGE", "quantity": 6, "unit": "lb", "unit_price": 1, "total_price": 6},
+    {"raw_description": "KOSHER SALT", "quantity": 1, "unit": "lb", "unit_price": 2, "total_price": 2},
+    {"raw_description": "CLAMSHELL CONTAINER", "quantity": 40, "unit": "ea", "unit_price": 0.25, "total_price": 10}
+  ],
+  "subtotal": 56,
+  "tax": 0,
+  "total": 56
+}
